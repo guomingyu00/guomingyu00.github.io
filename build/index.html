@@ -42,18 +42,27 @@
 
     var option1Div1 = document.querySelector("#option1");
     var option1Div2 = document.querySelector("#option2");
+    var option1Div3 = document.querySelector("#option3");
 
     function handleOption1Click() {
       // 在这里添加处理点击事件的代码
       console.log(11111);
+      config = config1
     }
     function handleOption2Click() {
       // 在这里添加处理点击事件的代码
       console.log(22222);
+      config = config2
+    }
+    function handleOption3Click() {
+      // 在这里添加处理点击事件的代码
+      console.log(33333);
+      config = {}
     }
 
     option1Div1.addEventListener("click", handleOption1Click);
     option1Div2.addEventListener("click", handleOption2Click);
+    option1Div3.addEventListener("click", handleOption3Click);
 
     // Shows a temporary message banner/ribbon for a few seconds, or
     // a permanent error message on top of the canvas if type=='error'.
@@ -85,6 +94,16 @@
       dataUrl: buildUrl + "/build.data.unityweb",
       frameworkUrl: buildUrl + "/build.framework.js.unityweb",
       codeUrl: buildUrl + "/build.wasm.unityweb",
+      streamingAssetsUrl: "StreamingAssets",
+      companyName: "DWF01",
+      productName: "Belial_NoVFX",
+      productVersion: "1.0",
+      showBanner: unityShowBanner,
+    };
+    var config2 = {
+      dataUrl: buildUrl + "/unity-2.data.unityweb",
+      frameworkUrl: buildUrl + "/unity-2.framework.js.unityweb",
+      codeUrl: buildUrl + "/unity-2.wasm.unityweb",
       streamingAssetsUrl: "StreamingAssets",
       companyName: "DWF01",
       productName: "Belial_NoVFX",
